@@ -7,18 +7,18 @@ const unsubscribe = store.subscribe(() =>
   console.log("Update state ... ! ", store.getState())
 );
 
-store.dispatch(cakeActions.ordered());
-store.dispatch(cakeActions.ordered());
-store.dispatch(cakeActions.ordered());
-store.dispatch(cakeActions.restocked(3));
-store.dispatch(icecreamActions.restockedIcecream(3))
+const { fetchUsers } = require("./features/user/userSlice");
 
-
+// store.dispatch(cakeActions.ordered());
+// store.dispatch(cakeActions.ordered());
+// store.dispatch(cakeActions.ordered());
+// store.dispatch(cakeActions.restocked(3));
+// store.dispatch(icecreamActions.restockedIcecream(3));
+store.dispatch(fetchUsers())
 
 // store.dispatch(icecreamActions.orderIcecream())
 // store.dispatch(icecreamActions.orderIcecream())
 // store.dispatch(icecreamActions.orderIcecream())
 // store.dispatch(icecreamActions.restockedIcecream(3))
 
-
-unsubscribe();
+// unsubscribe();
